@@ -1,0 +1,108 @@
+use_bpm 125
+use_synth :piano
+
+define :jerry do |s|
+  play :c3
+  play :g3
+  play :ds3
+  sleep s
+end
+
+define :jarry do |s|
+  play :bb3
+  play :g3
+  play :eb3
+  sleep s
+end
+
+define :jared do |s|
+  play :eb3
+  play :c3
+  play :ab2
+  sleep s
+end
+
+live_loop :kork do
+  2.times do
+    #MEASURE 1
+    play :c3, sustain: 2
+    play :g3, sustain: 2
+    play :ds3, sustain: 2
+    sleep 2
+    
+    jerry 0.75
+    
+    jerry 0.5
+    
+    jerry 0.5
+    
+    jerry 0.25
+    
+    #MEASURE 2play :bb3, sustain: 2
+    play :g3, sustain: 2
+    play :eb3, sustain: 2
+    sleep 2
+    
+    jarry 0.75
+    
+    jarry 0.5
+    
+    jarry 0.5
+    
+    jarry 0.25
+    
+    #MEASURE 3
+    play :eb3, sustain: 2
+    play :c3, sustain: 2
+    play :ab2, sustain: 2
+    sleep 2
+    
+    jared 0.75
+    
+    jared 1
+    
+    jared 0.25
+    
+    #MEASURE 4
+    play :f3, sustain: 2
+    play :d3, sustain: 2
+    play :bb2, sustain: 2
+    sleep 3
+    
+    play :r
+    sleep 0.25
+    
+    jarry 0.5
+    
+    play :r
+    sleep 0.25
+  end
+  stop
+end
+
+wait 32
+#MEASURE 5-D1
+play :f3, sustain: 2
+play :d3, sustain: 2
+play :bb2, sustain: 2
+sleep 3
+
+play :r
+sleep 0.25
+
+jarry 0.5
+
+play :r
+sleep 0.25
+
+play :e5
+sleep 0.5
+play :e5
+sleep 0.5
+play :e5
+sleep 0.5
+play :e5
+sleep 0.5
+play :e5
+sleep 1
+play :d5
