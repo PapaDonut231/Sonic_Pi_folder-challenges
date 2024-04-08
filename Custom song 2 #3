@@ -1,0 +1,330 @@
+use_bpm 125
+use_synth :piano
+
+define :jerry do |s|
+  play :c3
+  play :g3
+  play :ds3
+  sleep s
+end
+
+define :jarry do |s|
+  play :bb3
+  play :g3
+  play :eb3
+  sleep s
+end
+
+define :jared do |s|
+  play :eb3
+  play :c3
+  play :ab2
+  sleep s
+end
+
+live_loop :kork do
+  2.times do
+    #MEASURE 1
+    play :c3, sustain: 2
+    play :g3, sustain: 2
+    play :ds3, sustain: 2
+    sleep 2
+    
+    jerry 0.75
+    
+    jerry 0.5
+    
+    jerry 0.5
+    
+    jerry 0.25
+    
+    #MEASURE 2play :bb3, sustain: 2
+    play :g3, sustain: 2
+    play :eb3, sustain: 2
+    sleep 2
+    
+    jarry 0.75
+    
+    jarry 0.5
+    
+    jarry 0.5
+    
+    jarry 0.25
+    
+    #MEASURE 3
+    play :eb3, sustain: 2
+    play :c3, sustain: 2
+    play :ab2, sustain: 2
+    sleep 2
+    
+    jared 0.75
+    
+    jared 1
+    
+    jared 0.25
+    
+    #MEASURE 4
+    play :f3, sustain: 2
+    play :d3, sustain: 2
+    play :bb2, sustain: 2
+    sleep 3
+    
+    play :r
+    sleep 0.25
+    
+    jarry 0.5
+    
+    play :r
+    sleep 0.25
+  end
+  stop
+end
+
+wait 32
+#MEASURE 5-D1
+play :f3, sustain: 2
+play :d3, sustain: 2
+play :bb2, sustain: 2
+sleep 3
+
+play :r
+sleep 0.25
+
+jarry 0.5
+
+play :r
+sleep 0.25
+
+#MEASURE 5-D2
+play :r
+sleep 0.5
+
+play :c5, sustain: 2
+sleep 0.5
+play :c5, sustain: 2
+sleep 0.5
+play :c5, sustain: 2
+sleep 0.5
+play :c5, sustain: 2
+sleep 0.75
+play :c5, sustain: 2
+sleep 0.75
+play :bb4, sustain: 2
+sleep 0.5
+
+#MEASURE 6
+play :r
+sleep 0.5
+
+play :c5, sustain: 2
+sleep 0.5
+play :g5, sustain: 2
+sleep 1
+
+play :fs5, sustain: 2
+sleep 0.5
+play :ds5, sustain: 2
+sleep 0.25
+play :c5, sustain: 2
+sleep 0.5
+play :ds5, sustain: 2
+sleep 0.75
+
+#MEASURE 7
+
+play :c5, sustain: 2
+sleep 0.5
+play :bb4, sustain: 2
+sleep 0.5
+
+play :f5, sustain: 2
+sleep 0.5
+play :ds5, sustain: 2
+sleep 0.5
+play :c5, sustain: 2
+sleep 0.5
+play :bb4, sustain: 2
+sleep 0.25
+play :c5, sustain: 2
+sleep 0.5
+play :c5, sustain: 2
+sleep 0.75
+
+#MEASURE 8
+play :r
+sleep 0.5
+
+play :c5, sustain: 2
+sleep 0.5
+play :g5, sustain: 2
+sleep 1
+
+play :c5, sustain: 2
+sleep 0.5
+play :c5, sustain: 2
+sleep 0.5
+play :c5, sustain: 2
+sleep 0.75
+play :c5, sustain: 2
+sleep 0.25
+
+
+#MEASURE 9
+
+play :c5, sustain: 2
+sleep 0.5
+play :c5, sustain: 2
+sleep 0.5
+
+play :eb5, sustain: 2
+sleep 0.5
+play :c5, sustain: 2
+sleep 0.5
+play :c5, sustain: 2
+sleep 0.5
+play :c5, sustain: 2
+sleep 0.5
+play :c5, sustain: 2
+sleep 1
+
+#MEASURE 10
+
+play :g5, sustain: 2
+sleep 2
+play :f5, sustain: 2
+sleep 0.25
+play :eb5, sustain: 2
+sleep 0.75
+play :c5, sustain: 2
+sleep 1
+
+#MEASURE 11
+
+play :bb4, sustain: 2
+sleep 0.25
+play :d5, sustain: 2
+sleep 0.75
+
+play :d5, sustain: 2
+sleep 0.5
+play :d5, sustain: 2
+sleep 0.5
+play :d5, sustain: 2
+sleep 0.75
+play :d5, sustain: 2
+sleep 0.75
+play :d5, sustain: 2
+sleep 0.5
+
+#MEASURE 12
+
+play :g5, sustain: 2
+sleep 0.5
+play :c5, sustain: 2
+sleep 0.5
+
+play :c5, sustain: 2
+sleep 0.5
+play :c5, sustain: 2
+sleep 0.5
+play :c5, sustain: 2
+sleep 0.75
+play :c5, sustain: 2
+sleep 0.75
+play :bb4, sustain: 2
+sleep 0.5
+
+#MEASURE 13
+play :r
+sleep 0.5
+
+play :g5, sustain: 2
+sleep 0.5
+
+play :c5, sustain: 2
+sleep 0.5
+play :c5, sustain: 2
+sleep 0.5
+play :c5, sustain: 2
+sleep 0.5
+play :c5, sustain: 2
+sleep 0.75
+play :c5, sustain: 2
+sleep 0.75
+play :bb4, sustain: 2
+sleep 0.5
+
+#MEASURE 14
+play :r
+sleep 0.5
+
+play :c5, sustain: 2
+sleep 0.5
+play :g5, sustain: 2
+sleep 1
+
+play :fs5, sustain: 2
+sleep 0.5
+play :ds5, sustain: 2
+sleep 0.25
+play :c5, sustain: 2
+sleep 0.5
+play :ds5, sustain: 2
+sleep 0.75
+
+#MEASURE 15
+
+play :c5, sustain: 2
+sleep 0.5
+play :bb4, sustain: 2
+sleep 0.5
+
+play :f5, sustain: 2
+sleep 0.5
+play :ds5, sustain: 2
+sleep 0.5
+play :c5, sustain: 2
+sleep 0.5
+play :bb4, sustain: 2
+sleep 0.25
+play :c5, sustain: 2
+sleep 0.5
+play :c5, sustain: 2
+sleep 0.75
+
+#MEASURE 16
+play :r
+sleep 0.5
+
+play :c5, sustain: 2
+sleep 0.5
+play :g5, sustain: 2
+sleep 1
+
+play :c5, sustain: 2
+sleep 0.5
+play :c5, sustain: 2
+sleep 0.5
+play :c5, sustain: 2
+sleep 0.75
+play :c5, sustain: 2
+sleep 0.5
+
+
+#MEASURE 17
+
+play :c5, sustain: 2
+sleep 0.5
+play :c5, sustain: 2
+sleep 0.5
+
+play :eb5, sustain: 2
+sleep 0.5
+play :c5, sustain: 2
+sleep 0.5
+play :c5, sustain: 2
+sleep 0.5
+play :c5, sustain: 2
+sleep 0.5
+play :c5, sustain: 2
+sleep 1
