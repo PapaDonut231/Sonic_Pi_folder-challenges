@@ -1,0 +1,361 @@
+use_bpm 74
+use_synth :piano
+
+ambiance = "C:/Users/jimmy/Downloads/[ASMR] Vinyl Crackle  Record Player White Noise  Vinyl Crackling.wmv.mp3"
+
+ending = "C:/Users/jimmy/Downloads/Minecraft sheep sound effect.mp3"
+
+
+
+#ambiance:https://youtu.be/v_KBucDXFPk?si=EurUEH3iy4zsxJKq
+
+live_loop :Ambiance do
+  6.times do
+    sample ambiance,amp: 5
+    sleep 10
+  end
+  stop
+end
+
+define :jared do
+  play :A2,decay: 0.5
+  sleep 0.5
+  play :C3,decay: 0.5,attack_level: 1
+  sleep 0.5
+  play :A3,decay: 0.5
+  sleep 0.5
+  play :B3,decay: 0.5
+  sleep 0.5
+  
+  play :C4,decay: 0.5
+  sleep 0.5
+  play :B3,decay: 0.5
+  sleep 0.5
+  play :A3,decay: 0.5
+  sleep 0.5
+  play :E3,decay: 0.5
+  sleep 0.5
+end
+
+define :jarry do
+  play :D3,decay: 0.5
+  sleep 0.5
+  play :F3,decay: 0.5
+  sleep 0.5
+  play :C4,decay: 0.5
+  sleep 0.5
+  play :E4,decay: 0.5
+  sleep 0.5
+  play :C4,decay: 0.5
+  sleep 0.5
+  play :A3,decay: 0.5
+  sleep 1
+end
+
+
+define :jerry do
+  play :A2,decay: 0.5
+  sleep 0.5
+  play :C3,decay: 0.5,attack_level: 1
+  sleep 0.5
+  play :A3,decay: 0.5
+  sleep 0.5
+  play :B3,decay: 0.5
+  sleep 0.5
+  
+  play :C4,decay: 0.5
+  sleep 0.5
+  play :B3,decay: 0.5
+  sleep 0.5
+  play :A3,decay: 0.5
+  sleep 0.5
+  play :E3,decay: 0.5
+  sleep 0.5
+  
+  play :D3,decay: 0.5
+  sleep 0.5
+  play :F3,decay: 0.5
+  sleep 0.5
+  play :C4,decay: 0.5
+  sleep 0.5
+  play :E4,decay: 0.5
+  sleep 0.5
+  play :C4,decay: 0.5
+  sleep 0.5
+  play :A3,decay: 0.5
+  sleep 1
+end
+
+
+
+wait 5
+#MEASURE 1-4
+live_loop :MEASURE1to4 do
+  2.times do
+    play jerry
+    sleep 0.5
+  end
+  stop
+end
+
+wait 16
+
+#MEASURE 5
+play :G4,decay: 2
+play :A2,decay: 0.5
+sleep 0.5
+play :C3,decay: 0.5,attack_level: 1
+sleep 0.5
+play :A3,decay: 0.5
+sleep 0.5
+play :B3,decay: 0.5
+sleep 0.5
+
+play :C4,decay: 0.5
+sleep 0.5
+play :B3,decay: 0.5
+sleep 0.5
+play :A4,decay: 1.5
+play :A3,decay: 0.5
+sleep 0.5
+play :E3,decay: 0.5
+sleep 0.5
+
+#MEASURE 6
+play :F4,decay: 2.5
+jarry
+play :E4,decay: 1.5
+sleep 0.5
+play :F4,decay: 1.5
+sleep 0.5
+
+#MEASURE 7
+play :G4,amp: 1.5,decay: 2
+play :A2,decay: 0.5
+sleep 0.5
+play :C3,decay: 0.5,attack_level: 1
+sleep 0.5
+play :A3,decay: 0.5
+sleep 0.5
+play :B3,decay: 0.5
+sleep 0.5
+
+play :C4,decay: 0.5
+sleep 0.5
+play :B3,decay: 0.5
+sleep 0.5
+play :B4,decay: 1.5
+sleep 0.5
+play :C5,decay: 1.5
+sleep 0.5
+play :A3,decay: 2
+play :E3,decay: 0.5
+sleep 0.5
+
+#MEASURE 8
+play :C5,decay: 2.5
+play :D3,decay: 0.5
+sleep 0.5
+play :F4,decay: 2
+play :F3,decay: 0.5
+sleep 0.5
+play :C4,decay: 0.5
+sleep 0.5
+play :E4,decay: 0.5
+sleep 0.5
+play :C4,decay: 0.5
+sleep 0.5
+play :A3,decay: 0.5
+sleep 0.5
+
+play :E4,decay: 1.5
+sleep 0.5
+play :F4,decay: 1.5
+sleep 0.5
+
+#MEASURE 9
+play :G5,deacay: 1.5
+play :G2,decay: 0.5
+sleep 0.5
+play :B2,decay: 0.5
+sleep 0.5
+play :D3,decay: 0.5
+sleep 0.5
+play :F5,decay: 1.5
+play :F3,decay: 0.5
+sleep 0.5
+
+play :D5,decay: 1.5
+play :A3,decay: 0.5
+sleep 0.5
+play :F3,decay: 0.5
+sleep 0.5
+play :A4,decay: 1.5
+play :D3,decay: 0.5
+sleep 0.5
+play :B4,decay: 1.5
+play :B2,decay: 0.5
+sleep 0.5
+
+#MEASURE 10
+play :B4,decay: 1.5
+play :G2,decay: 0.5
+sleep 0.5
+play :B2,decay: 0.5
+sleep 0.5
+play :D3,decay: 0.5
+sleep 0.5
+play :F3,decay: 0.5
+sleep 0.5
+play :A3,decay: 0.5
+sleep 0.5
+
+#MEASURE 11
+play :G5,deacay: 1.5
+play :G2,decay: 0.5
+sleep 0.5
+play :B2,decay: 0.5
+sleep 0.5
+play :F5,decay: 1.5
+play :D3,decay: 0.5
+sleep 0.5
+play :F3,decay: 0.5
+sleep 0.5
+
+play :D5,decay: 1.5
+play :A3,decay: 0.5
+sleep 0.5
+play :F3,decay: 0.5
+sleep 0.5
+play :A4,decay: 1.5
+play :D3,decay: 0.5
+sleep 0.5
+play :B4,decay: 1.5
+play :B2,decay: 0.5
+sleep 0.5
+
+#MEASURE 12
+play :G4,decay: 1.5
+play :G2,decay: 0.5
+sleep 0.5
+play :B2,decay: 0.5
+sleep 0.5
+play :D3,decay: 0.5
+sleep 0.5
+play :F3,decay: 0.5
+sleep 0.5
+play :A3,decay: 0.5
+sleep 0.5
+play :A4
+sleep 0.5
+
+#MEASURE 13
+play :E4, decay: 1.5
+jared
+
+#MEASURE 14
+play :A2,decay: 0.5
+sleep 0.5
+play :C3,decay: 0.5
+sleep 0.5
+play :A3,decay: 0.5
+sleep 0.5
+play :B3,decay: 0.5
+sleep 0.5
+
+play :C4,decay: 0.5
+sleep 0.5
+play :E4,decay: 0.5
+sleep 0.5
+play :A4,decay: 0.5
+sleep 0.5
+play :C5,decay: 0.5
+sleep 0.5
+
+
+#MEASURE 15
+play :D5, decay: 1.5
+play :B4, decay: 1.5
+play :F4, decay: 1.5
+play :B2,decay: 0.5
+sleep 0.5
+play :D3,decay: 0.5
+sleep 0.5
+play :F3,decay: 0.5
+sleep 0.5
+
+play :C5,decay: 1.5
+play :A3,decay: 0.5
+sleep 0.5
+
+play :A4,decay: 1.5
+play :bB3,decay: 0.5
+sleep 0.5
+
+
+
+play :E4,decay: 1.5
+play :E5,decay: 1.5
+sleep 0.5
+
+
+#MEASURE 16
+play :F5,decay: 1.5
+play :F4,decay: 1.5
+sleep 0.5
+
+play :F5,decay: 1.5
+play :F4,decay: 1.5
+play :G2,decay: 0.5
+sleep 0.5
+play :D5
+play :B2,decay: 0.5
+sleep 0.5
+play :D3,decay: 0.5
+sleep 0.5
+play :F3,decay: 0.5
+sleep 0.5
+play :D5,decay: 0.5
+play :A3,decay: 0.5
+sleep 1
+play :B4,decay: 0.5
+sleep 0.5
+play :C5,decay: 0.5
+sleep 1
+
+#MEASURE 17
+play :D5,decay: 0.5
+play :A4,decay: 0.5
+play :E4,decay: 0.5
+play :G2,decay: 0.5
+sleep 0.5
+play :B2,decay: 0.5
+sleep 0.5
+play :C5,decay: 0.5
+play :D3,decay: 0.5
+sleep 0.5
+play :D5,decay: 0.5
+play :F3,decay: 0.5
+sleep 0.5
+play :A3,decay: 0.5
+sleep 1
+play :F5,decay: 0.5
+sleep 0.5
+
+#MEASURE 18
+play :C5,decay: 0.5,sustain: 2
+play :A4,decay: 0.5,sustain: 2
+play :E4,decay: 0.5,sustain: 2
+sleep 0.5
+play :A3,decay: 0.5,sustain: 2
+play :E3,decay: 0.5,sustain: 2
+play :C3,decay: 0.5,sustain: 2
+play :A2,decay: 0.5,sustain: 2
+
+live_loop :endin do
+  1.times do
+    sample ending,amp: 5
+    sleep 10
+  end
+  stop
+end
