@@ -1,0 +1,337 @@
+use_bpm 125
+use_synth :piano
+
+ambiance = "C:/Users/jimmy/Downloads/audiomass-output (1).mp3"
+
+#ambiance:https://youtu.be/-FtCTW2rVFM?si=KudgcufIdI0PhpYY
+
+notes = ["g5","f5","eb5","c5",  "bb4","d5","d5","d5","d5","d5","d5",   "eb5","c5","c5","c5","c5","c5",    "g5","c5","c5","c5","c5","c5","bb4"]
+jimjim = [2, 0.25, 0.75,1,            0.25,0.75,0.5, 0.5,0.75,0.75,0.5    ,0.5,0.5,0.5,0.5,0.75,0.75,0.5,    0.5,0.5,0.5,0.5,0.75,0.75,0.5 ]
+i = 0
+j = 0
+#--------------------------------------------------------------------------
+define :jerry do |s|
+  play :c3
+  play :g3
+  play :ds3
+  sleep s
+end
+
+define :jarry do |s|
+  play :bb3
+  play :g3
+  play :eb3
+  sleep s
+end
+
+define :jared do |s|
+  play :eb3
+  play :c3
+  play :ab2
+  sleep s
+end
+define :jarred do
+  play :c5, sustain: 2
+  sleep 0.5
+  play :c5, sustain: 2
+  sleep 0.5
+  play :c5, sustain: 2
+  sleep 0.5
+  play :c5, sustain: 2
+  sleep 0.75
+  play :c5, sustain: 2
+  sleep 0.75
+  play :bb4, sustain: 2
+  sleep 0.5
+end
+#---------------------------------------------------------------------------------
+
+define :larry do
+  #MEASURE 6
+  play :r
+  sleep 0.5
+  play :c5, sustain: 2
+  sleep 0.5
+  play :g5, sustain: 2
+  sleep 1
+  
+  play :fs5, sustain: 2
+  sleep 0.5
+  play :ds5, sustain: 2
+  sleep 0.25
+  play :c5, sustain: 2
+  sleep 0.5
+  play :ds5, sustain: 2
+  sleep 0.75
+end
+
+define :lerry do
+  #MEASURE 7
+  play :c5, sustain: 2
+  sleep 0.5
+  play :bb4, sustain: 2
+  sleep 0.5
+  
+  play :f5, sustain: 2
+  sleep 0.5
+  play :ds5, sustain: 2
+  sleep 0.5
+  play :c5, sustain: 2
+  sleep 0.5
+  play :bb4, sustain: 2
+  sleep 0.25
+  play :c5, sustain: 2
+  sleep 0.5
+  play :c5, sustain: 2
+  sleep 0.75
+end
+
+define :lary do
+  #MEASURE 8
+  play :r
+  sleep 0.5
+  play :c5, sustain: 2
+  sleep 0.5
+  play :g5, sustain: 2
+  sleep 1
+  
+  play :c5, sustain: 2
+  sleep 0.5
+  play :c5, sustain: 2
+  sleep 0.5
+  play :c5, sustain: 2
+  sleep 0.75
+  play :c5, sustain: 2
+  sleep 0.25
+end
+
+#MEASURE 9
+define :lar do
+  play :c5, sustain: 2
+  sleep 0.5
+  play :c5, sustain: 2
+  sleep 0.5
+  
+  play :eb5, sustain: 2
+  sleep 0.5
+  play :c5, sustain: 2
+  sleep 0.5
+  play :c5, sustain: 2
+  sleep 0.5
+  play :c5, sustain: 2
+  sleep 0.5
+  play :c5, sustain: 2
+  sleep 1
+end
+
+#----------------------------------------------------------------------------
+
+live_loop :Ambiance do
+  1.times do
+    sample ambiance
+    sleep 10
+  end
+  stop
+end
+
+wait 5
+
+live_loop :kork do
+  2.times do
+    #MEASURE 1
+    play :c3, sustain: 2
+    play :g3, sustain: 2
+    play :ds3, sustain: 2
+    sleep 2
+    
+    jerry 0.75
+    
+    jerry 0.5
+    
+    jerry 0.5
+    
+    jerry 0.25
+    
+    #MEASURE 2
+    play :g3, sustain: 2
+    play :eb3, sustain: 2
+    sleep 2
+    
+    jarry 0.75
+    
+    jarry 0.5
+    
+    jarry 0.5
+    
+    jarry 0.25
+    
+    #MEASURE 3
+    play :eb3, sustain: 2
+    play :c3, sustain: 2
+    play :ab2, sustain: 2
+    sleep 2
+    
+    jared 0.75
+    
+    jared 1
+    
+    jared 0.25
+    
+    #MEASURE 4
+    play :f3, sustain: 2
+    play :d3, sustain: 2
+    play :bb2, sustain: 2
+    sleep 3
+    
+    play :r
+    sleep 0.25
+    
+    jarry 0.5
+    
+    play :r
+    sleep 0.25
+  end
+  stop
+end
+
+wait 32
+
+
+play :f3, sustain: 2
+play :d3, sustain: 2
+play :bb2, sustain: 2
+sleep 0.25
+
+play :r
+sleep 0.25
+
+jarred
+
+jarry 0.5
+
+play :r
+sleep 0.25
+
+live_loop :korc do
+  5.times do
+    #MEASURE 1
+    play :c3, sustain: 2
+    play :g3, sustain: 2
+    play :ds3, sustain: 2
+    sleep 2
+    
+    jerry 0.75
+    
+    jerry 0.5
+    
+    jerry 0.5
+    
+    jerry 0.25
+    
+    #MEASURE 2
+    play :g3, sustain: 2
+    play :eb3, sustain: 2
+    sleep 2
+    
+    jarry 0.75
+    
+    jarry 0.5
+    
+    jarry 0.5
+    
+    jarry 0.25
+    
+    #MEASURE 3
+    play :eb3, sustain: 2
+    play :c3, sustain: 2
+    play :ab2, sustain: 2
+    sleep 2
+    
+    jared 0.75
+    
+    jared 1
+    
+    jared 0.25
+    
+    #MEASURE 4
+    play :f3, sustain: 2
+    play :d3, sustain: 2
+    play :bb2, sustain: 2
+    sleep 3
+    
+    play :r
+    sleep 0.25
+    
+    jarry 0.5
+    
+    play :r
+    sleep 0.25
+  end
+  stop
+end
+
+live_loop :nisfar do
+  1.times do
+    
+    larry
+    
+    lerry
+    
+    lary
+    
+    lar
+    
+    live_loop :fo do
+      24.times do
+        play(notes[i])
+        sleep(jimjim[j])
+        i = i + 1
+        j = j + 1
+      end
+      i = 0
+      j = 0
+      stop
+    end
+    
+    wait 16
+    
+    larry
+    
+    lerry
+    
+    lary
+    
+    lar
+    
+  end
+  stop
+end
+
+wait 48
+
+live_loop :doodo do
+  1.times do
+    live_loop :fo do
+      24.times do
+        play(notes[i])
+        sleep(jimjim[j])
+        i = i + 1
+        j = j + 1
+      end
+      i = 0
+      j = 0
+      stop
+    end
+    
+    wait 16
+    
+    larry
+    
+    lerry
+    
+    lary
+    
+    lar
+  end
+  stop
+end
